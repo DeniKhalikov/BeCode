@@ -1,2 +1,2 @@
 # BeCode
-BeCode Bootcamp
+Repository for everything BeCode.
