@@ -15,11 +15,11 @@
   var question = prompt("do you want some cake? Please enter yes or no");
   if (question == "no")
   {
-    alert("okay")
+    alert("more cake for me then")
   }
   else if (question == "yes")
   {
-    alert("there you go");
+    alert("congratulations");
   }
   else{
     alert("try again");
