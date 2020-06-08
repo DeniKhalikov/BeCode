@@ -12,5 +12,17 @@
 (function() {
 
   // your code here
+  var question = prompt("do you want some cake? Please enter yes or no");
+  if (question == "no")
+  {
+    alert("okay")
+  }
+  else if (question == "yes")
+  {
+    alert("there you go");
+  }
+  else{
+    alert("try again");
+  }
 
 })();
