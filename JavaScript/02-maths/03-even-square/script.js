@@ -13,7 +13,12 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+     let number = 1;
+     while (number*number <= 21)
+     {
+         console.log(number*number)
+         number++
+     }
 
     });
 
