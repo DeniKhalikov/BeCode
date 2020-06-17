@@ -9,6 +9,11 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+
+
+
+
+/*
 function test() 
 {
     console.log(i);
@@ -36,9 +41,9 @@ switch(button)
         break;
 }
 
-/* hmtl collections almost array */
-(function() {
-    /* getElementsByClassName creates an "array" of the html ids */
+/* hmtl collections almost array 
+// (function() {
+    /* getElementsByClassName creates an "array" of the html ids 
     const buttons = document.getElementsByClassName('operator'); 
 
     for(let i=0; i < button.length; i++)
@@ -46,5 +51,15 @@ switch(button)
         button[i].addEventListener("click", function(){test(i);})
     }
     return true;
-})();
+})(); 
 
+
+
+let number = document.getelementbyid('number')value;
+
+let factorial =1;
+
+for(let i =1; i<=number; i++)
+factorial  = factorial * i;
+
+console.log(factorial):
