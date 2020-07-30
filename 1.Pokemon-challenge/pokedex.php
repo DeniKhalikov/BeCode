@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="pokedex.css">
+    <link rel="stylesheet" href="pokededdsdx.css">
     <title>Pokedex</title>
 </head>
 
 <body>
+
+    <?php
+    ini_set('display_errors', "1");
+    ini_set('display_startup_errors', "1");
+    error_reporting(E_ALL);
+    ?>
 
     <?php
     if (isset($_GET["pokemon"])) {
@@ -27,20 +33,18 @@
                 <div class="left-container_main-section">
 
                     <div class="main-section_white">
-                        <div class="main-section_black">
-
+                        <div class="main-section_black src="<?php echo $pokeData['sprites']['front_default']; ?>" class="poke-front-image" alt="front">">
                             <div class="main-screen hide">
-
                                 <div class="screen_header">
                                     <span class="poke-name"></span>
                                     <span class="poke-id"></span>
                                 </div>
                                 <div class="screen_image">
                                     <img src="<?php echo $pokeData['sprites']['front_default']; ?>" class="poke-front-image" alt="front">
-                                    <img src="" class="poke-back-image" alt="back">
                                 </div>
                                 <div class="screen_description">
                                     <div class="stats_types">
+                                        <img src="<?php echo $pokeData['sprites']['front_default']; ?>" class="poke-front-image" alt="front">
                                         <span class="poke-type-one"></span>
                                         <span class="poke-type-two"></span>
                                     </div>

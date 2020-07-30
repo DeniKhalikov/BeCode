@@ -25,5 +25,12 @@
     ];
 
     // your code here
+    function addFruit(){
+    
+        fruits.push('kiwi');
+        console.log(fruits);
+    }
+
+    addFruit();
 
 })();
