@@ -1,5 +1,5 @@
 # Title: PHP Guestbook
-
+also tested contribution on mac after setting email for github
 testing commit contribution, something wrong with email...okay without star now from ubuntu
 
 - Repository: `challenge-php-guestbook`
