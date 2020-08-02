@@ -57,10 +57,3 @@ class PostLoader {
     }
 }
 
-$loader = new PostLoader();
-$post = new Post('Koen', 'Hello world');
-$loader->addPost($post);
-$loader->addPost(new Post('Vinnie', 'Bye world'));
-$loader->savePosts();
-echo "messages are saved";
-var_dump($loader->getPosts());
