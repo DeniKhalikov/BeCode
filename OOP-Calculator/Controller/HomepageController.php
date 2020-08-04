@@ -13,8 +13,8 @@ class HomepageController
         $products = getAllProductInfo();
         $customers = getAllCustomerInfo();
 
-        require 'View/homepage.php';
 
+        require 'View/homepage.php';
 
     }
 }

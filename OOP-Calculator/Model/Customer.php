@@ -3,18 +3,16 @@
 
 class Customer
 {
-    private int $id, $groupId, $fixedDiscount, $variableDiscount;
+    private int $id, $fixedDiscount, $variableDiscount;
     private string $firstName, $lastName;
+    private Group $group;
 
-    /**
-     * @var Product[]
-     */
-    private array $products;
+
 
     /**
      * Customer constructor.
      * @param int $id
-     * @param int $groupId
+     * @param Group $group
      * @param int $fixedDiscount
      * @param int $variableDiscount
      * @param string $firstName
@@ -23,10 +21,10 @@ class Customer
 
 
 
-    public function __construct(int $id, int $groupId, int $fixedDiscount, int $variableDiscount, string $firstName, string $lastName)
+    public function __construct(int $id, Group $group, int $fixedDiscount, int $variableDiscount, string $firstName, string $lastName)
     {
         $this->id = $id;
-        $this->groupId = $groupId;
+        $this->group = $group;
         $this->fixedDiscount = $fixedDiscount;
         $this->variableDiscount = $variableDiscount;
         $this->firstName = $firstName;
@@ -81,13 +79,23 @@ class Customer
         return $this->lastName;
     }
 
-    /**
-     * @return Product[]
-     */
-    public function getProducts(): array
-    {
-        return $this->products;
-    }
+//    /**
+//     * @return Group
+//     */
+//    public function getGroup(): Group
+//    {
+//
+//    }
+//
+//    /**
+//     * @param Group[] $groups
+//     * @return int
+//     */
+//
+//    public function getFinalVariableDiscount(array $groups): int
+//    {
+//        $customerVariableDiscount = $this->getVariableDiscount();
+//    }
 
 
 

@@ -5,34 +5,28 @@
         <form method="post">
             <div class="input-group mb-3">
                 <select name="productId" class="custom-select" >
+
                     <option selected disabled value="">Choose a product</option>
                     <?php
                     /**
-                     * @var Product[] $customers
+                     * @var Product[] $product
                      */
-                    foreach ($customers as $customer) {
-                        $name = ucwords($customer->getName());
-                        $price = $customer->getPrice()/100;
+                    foreach ($products as $product) {
+                        $name = ucwords($product->getName());
+                        $price = $product->getPrice()/100;
                         $selected = '';
                         if(isset($_POST['productId'])) {
                             $id = (int)htmlspecialchars(trim($_POST['productId']));
-                            if($customer->getId() === $id) {
+                            if($products->getId() === $id) {
                                 $selected = 'selected';
                             }
                         }
                         echo "
-                <option value='{$customer->getId()}' {$selected}>{$name} | &euro;{$price}</option>
+                <option value='{$product->getId()}' {$selected}>{$name} | &euro;{$price}</option>
                 ";
                     }
                     ?>
                 </select>
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="submit">Submit</button>
-                </div>
-            </div>
-        </form>
-        <form method="post">
-            <div class="input-group mb-3">
                 <select name="customerId" class="custom-select" >
                     <option selected disabled value="">Choose a customer</option>
                     <?php
@@ -60,6 +54,7 @@
                 </div>
             </div>
         </form>
+
 
     </section>
 <?php require 'includes/footer.php'?>
