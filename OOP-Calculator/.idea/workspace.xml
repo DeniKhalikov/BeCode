@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="62abfe8f-75bc-4ea5-872e-78b4a37f9fc1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Controller/HomepageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/HomepageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="becode.local" id="d71e9eb5-0efa-4ae6-aecb-2f53691d33b0" name="becode.local" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$" remote-root="/var/www/becode" />
+        </path_mappings>
+      </server>
+    </servers>
+  </component>
+  <component name="ProjectId" id="1fg7XxjMyE5mFh70rNLBfqkKKHG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="/var/www/becode/OOP-Calculator" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="62abfe8f-75bc-4ea5-872e-78b4a37f9fc1" name="Default Changelist" comment="" />
+      <created>1596627924157</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596627924157</updated>
+      <workItem from="1596627925221" duration="2177000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="727" y="626" width="408" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1596629622005">
+      <screen x="0" y="367" width="2560" height="1080" />
+    </state>
+    <state x="727" y="626" width="408" height="569" key="#com.intellij.ide.util.MemberChooser/0.367.2560.1080/2560.0.1080.1920@0.367.2560.1080" timestamp="1596629622005" />
+    <state x="871" y="560" width="424" height="491" key="FileChooserDialogImpl" timestamp="1596630100594">
+      <screen x="0" y="367" width="2560" height="1080" />
+    </state>
+    <state x="871" y="560" width="424" height="491" key="FileChooserDialogImpl/0.367.2560.1080/2560.0.1080.1920@0.367.2560.1080" timestamp="1596630100594" />
+    <state x="1121" y="626" width="553" height="575" key="NewPhpClassDialog" timestamp="1596628074036">
+      <screen x="0" y="367" width="2560" height="1080" />
+    </state>
+    <state x="1121" y="626" width="553" height="575" key="NewPhpClassDialog/0.367.2560.1080/2560.0.1080.1920@0.367.2560.1080" timestamp="1596628074036" />
+    <state x="1067" y="429" key="run.anything.popup" timestamp="1596628024126">
+      <screen x="0" y="367" width="2560" height="1080" />
+    </state>
+    <state x="1067" y="429" key="run.anything.popup/0.367.2560.1080/2560.0.1080.1920@0.367.2560.1080" timestamp="1596628024126" />
+    <state x="1066" y="606" key="search.everywhere.popup" timestamp="1596627984814">
+      <screen x="0" y="367" width="2560" height="1080" />
+    </state>
+    <state x="1066" y="606" key="search.everywhere.popup/0.367.2560.1080/2560.0.1080.1920@0.367.2560.1080" timestamp="1596627984814" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Controller/HomepageController.php</url>
+          <line>14</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

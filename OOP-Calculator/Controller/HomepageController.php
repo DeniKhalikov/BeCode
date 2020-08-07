@@ -10,9 +10,9 @@ class HomepageController
          * @var Product[]
          */
 
-        $products = getAllProductInfo();
+        $productLoader = new ProductLoader();
+        $products = $productLoader->getProducts();
         $customers = getAllCustomerInfo();
-
 
         require 'View/homepage.php';
 
