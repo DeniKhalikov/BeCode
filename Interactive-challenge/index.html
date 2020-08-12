@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport"
+           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+     <link href="main.css" type="text/css" rel="stylesheet"/>
+     <title>CO-OP Mission</title>
+</head>
+
+<body>
+
+<header>
+<div class="slideshow">
+    <img class="slider" src="https://favorflav.com/images/Festival-TREK-2018-916x458.jpg">
+    <img class="slider" src="https://cf.ltkcdn.net/pregnancy/images/orig/224603-1600x1067-Eating-a-hotdog.jpg">
+    <img class="slider" src="https://torontofoodtrucks.ca/wp-content/uploads/2018/07/20170807-2048-FoodTruckFest16.jpg">
+    <img class="slider" src="https://www.salem.org/wp-content/uploads/2019/06/62187848_2701086983295982_3818812146230231040_o.jpg">
+    <button class="slider__button__left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="slider__buton__right" onclick="plusDivs(+1)">&#10095;</button>
+</div>
+</header>
+
+<main>
+    <nav class="tab">
+        <button id="tab__one">What is it?</button> <!-- knopEen-->
+        <button id="tab__two">Where is it?</button>
+        <button id="tab__three">Contact</button>
+    </nav>
+    <section id="section__one" class="tabContent"><!--One-->
+        <h3>What we're about</h3>
+        <p> Foodies unite! We've organised a huge foodie extravaganza! Only this weekend will you get to enjoy delicious
+            meals directly from regions like Kanto, Johto or Hoenn..but wait, there's more! We've also got dishes from
+            Antwerp, Hoboken en Borgerhout. This weekend everyone is going to be satisfied beyond their culinary dreams!
+            Location
+            Parkspoor Noord
+            Address
+            Ellermanstraat, 2060 Antwerpen
+            Type
+            International food festival
+
+            Serving
+            Food made by Poké chefs and local chefs.
+        </p>
+    </section>
+
+    <section id="section__two" class="tabContent">
+        <h3>Right here!</h3>
+        <ul>
+            <li>Location: Parkspoor Noord</li>
+            <li>Address:  Ellermanstraat, 2060 Antwerpen, Belgium</li>
+        </ul>
+
+        <p>Interdimensional food festival bringing the culinary arts of wherever it has been before.</p>
+
+    </section>
+
+    <section id="section__three" class="tabContent">
+        <h3>Contact</h3>
+        <p>Contact us here.</p>
+        <div class="container__cf">
+            <form action="contact__page" id="contact">
+
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                <label for="email"> Email</label>
+                <input type="text" id="email" name="email" placeholder="Your email..">
+
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Your question.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+</main>
+<script src="script.js"></script>
+
+</body>
+</html>
