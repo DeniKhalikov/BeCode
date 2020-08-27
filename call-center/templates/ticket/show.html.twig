@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ticket{% endblock %}
+
+{% block body %}
+    <h1>Ticket</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ ticket.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ ticket.title }}</td>
+            </tr>
+            <tr>
+                <th>Message</th>
+                <td>{{ ticket.message }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ ticket.status }}</td>
+            </tr>
+            <tr>
+                <th>Priority</th>
+                <td>{{ ticket.priority }}</td>
+            </tr>
+            <tr>
+                <th>Posted</th>
+                <td>{{ ticket.posted ? ticket.posted|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="{{ path('ticket_index') }}">back to list</a>
+    <a href="{{ path('ticket_edit', {'id': ticket.id}) }}">edit</a>
+
+    {{ include('ticket/_delete_form.html.twig') }}
+    <br>
+    <h3>Comments</h3>
+    {% for comment in ticket.comments %}
+        {% if comment.private == false %}
+            <li>
+                <p>User: {{ comment.user.username }}</p>
+                <p>Comment: {{ comment.comment }}</p>
+            </li>
+        {% elseif is_granted(roles['FLA']) %}
+            <li>
+                <p>User: {{ comment.user.username }}</p>
+                <p>Roles: {{ comment.user.roles|join }}</p>
+                <p>Comment: {{ comment.comment }}</p>
+                <p>Private: {{ comment.private }}</p>
+            </li>
+        {% endif %}
+    {% endfor %}
+    <br>
+
+{% endblock %}

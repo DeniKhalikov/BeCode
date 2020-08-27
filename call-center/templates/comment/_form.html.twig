@@ -1,0 +1,12 @@
+{{ form_start(form) }}
+    {{ form_widget(form._token) }}
+    {{ form_label(form.comment) }}
+    {{ form_widget(form.comment) }}
+    <br>
+    {% if is_granted(roles['FLA']) %}
+        {{ form_widget(form.private) }}
+        {{ form_label(form.private) }}
+    <br>
+    {% endif %}
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form, {'render_rest': false}) }}

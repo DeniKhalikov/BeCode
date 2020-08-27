@@ -1,0 +1,99 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ticket index{% endblock %}
+
+{% block body %}
+    <h1>Overview Tickets</h1>
+    {% if roles['MANAGER'] in user.roles %}
+        <a href="{{ path('ticket_deAssign')}}">De-assign all tickets</a>
+    {% endif %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Message</th>
+                <th>Status</th>
+                {% if roles['FLA'] in user.roles %}
+                <th>Priority</th>
+                {% endif %}
+                <th>Posted</th>
+                <th>Agent</th>
+                <th>actions</th>
+                {% if roles['FLA'] in user.roles %}
+                <th>Agent actions</th>
+                {% endif %}
+                {% if roles['MANAGER'] in user.roles %}
+                <th>Manager actions</th>
+                {% endif %}
+            </tr>
+        </thead>
+        <tbody>
+        {% for ticket in tickets %}
+            <tr>
+                <td>{{ ticket.id }}</td>
+                <td>{{ ticket.title }}</td>
+                <td>{{ ticket.message }}</td>
+                <td>{{ ticket.status }}</td>
+                {% if roles['FLA'] in user.roles %}
+                <td>{{ ticket.priority }}</td>
+                {% endif %}
+                <td>{{ ticket.posted ? ticket.posted|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ ticket.agentId }}</td>
+                <td>
+                    <a href="{{ path('ticket_show', {'id': ticket.id}) }}">show</a>
+                    {% if roles['FLA'] not in user.roles %}
+                    <a href="{{ path('ticket_edit', {'id': ticket.id}) }}">edit</a>
+                    {% endif %}
+                    {% if ticket.canComment(user) %}
+                        <a href="{{ path('ticket_comment', {'id': ticket.id}) }}">add comment</a>
+                    {% endif %}
+                    {% if (ticket.status is same as(statuses["Waiting for customer feedback"])) and (roles['FLA'] not in user.roles) %}
+                    <a href="{{ path('ticket_respond', {'id': ticket.id}) }}">mail agent</a>
+                    {% endif %}
+                    {% if ticket.canReopen() and ticket.status is same as (statuses["closed"]) and user.roles|length==1  %}
+                        <a href="{{ path('ticket_reopen', {'id': ticket.id}) }}">Reopen</a>
+                    {% endif %}
+                </td>
+
+                {% if roles['FLA'] in user.roles %}
+                    <td>
+                        {% if ticket.agentId == NULL %}
+                        <a href="{{  path('ticket_assign', {'id': ticket.id,'user_id': user.id}) }}">Assign myself</a>
+                        {% endif %}
+                        {% if ticket.status != statuses["closed"] and ticket.canClose() %}
+                            <a href="{{  path('ticket_close', {'id': ticket.id}) }}">Close ticket</a>
+                        {% endif %}
+                        {% if ticket.agentId != NULL and  ticket.status != statuses["closed"]  %}
+                            <a href="{{ path('ticket_escalate', {'id': ticket.id}) }}">Escalate</a>
+                        {% endif %}
+
+                    </td>
+                {% endif %}
+                {% if roles['MANAGER'] in user.roles%}
+                    <td>
+                    <a href="{{ path('ticket_priority', {'id': ticket.id}) }}">Adjust priority</a>
+                    {% if ticket.agentId is not empty  %}
+
+                        <a href="{{ path('ticket_reassign', {'id': ticket.id}) }}">Re-assign</a>
+                        {% if ticket.wontfix is empty %}
+                            <a href="{{ path('ticket_wontfix', {'id': ticket.id}) }}">Mark as "Won't fix"</a>
+                        {% endif %}
+                    </td>
+                {% endif %}
+                {% endif %}
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% if roles['FLA'] not in user.roles %}
+    <a href="{{ path('ticket_new') }}">Create new</a>
+    {% endif %}
+    {% if roles['MANAGER'] in user.roles %}
+    {{ include('ticket/_managerDashboard.html.twig') }}
+    {% endif %}
+{% endblock %}

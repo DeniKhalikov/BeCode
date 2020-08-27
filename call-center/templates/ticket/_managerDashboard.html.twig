@@ -1,0 +1,13 @@
+<section id="dashboard">
+
+    <h1>DASHBOARD</h1>
+    <a href="{{ path('user_index') }}">Go to all Agents and Users</a>
+    <br>
+    <h3>Statistics</h3>
+    <ul>
+        <li>Open tickets: {{ dashboard.getCounterOpen() }}</li>
+        <li>Closed tickets: {{ dashboard.getCounterClosed() }}</li>
+        <li>Re-opened tickets: {{ dashboard.getCounterReopened() }}</li>
+        <li>% re-opened tickets: {{ dashboard.getPercent() }}</li>
+    </ul>
+</section>

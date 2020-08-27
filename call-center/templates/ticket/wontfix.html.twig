@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mark ticket as "Won't fix"{% endblock %}
+
+{% block body %}
+    <h1>Mark ticket as "Won't fix"</h1>
+
+    <form method="post">
+        <label for="wontfixReason">Won't be fixed because:</label>
+        <input type="text" name="wontfixReason" id="wontfixReason">
+        <button type="submit">Mark as won't fix</button>
+    </form>
+
+    <a href="{{ path('ticket_index') }}">back to list</a>
+
+{% endblock %}

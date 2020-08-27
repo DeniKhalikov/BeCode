@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Adjust Priority Ticket{% endblock %}
+
+{% block body %}
+    <h1>Adjust Priority  ticket</h1>
+    <form method="post">
+        <select name="priorities">
+            {% for key,priority in priorities %}
+                    <option value="{{ priority }}">{{ priority }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit" name="save">Adjust priority</button>
+    </form>
+
+    <a href="{{ path('ticket_index') }}">back to list</a>
+{% endblock %}

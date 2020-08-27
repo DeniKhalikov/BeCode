@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit User{% endblock %}
+
+{% block body %}
+    <h1>Adjust role Agent: {{ user.username }}</h1>
+    <form method="post">
+    <select name="roles">
+        <option value="{{roles['USER']}},{{roles['FLA']}}">First Line Agent</option>
+        <option value="{{roles['USER']}},{{roles['FLA']}},{{roles['SLA']}}">Second Line Agent</option>
+    </select>
+    <button class="btn">{{ button_label|default('Save') }}</button>
+   </form>
+
+    <a href="{{ path('user_index') }}">back to list</a>
+
+    {{ include('user/_delete_form.html.twig') }}
+{% endblock %}

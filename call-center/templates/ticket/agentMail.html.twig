@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mail agent{% endblock %}
+
+{% block body %}
+    <h1>Mail agent your response</h1>
+
+    {{ form_start(form) }}
+    <div class="row">
+        <div class="col">
+            {{ form_row(form.response) }}
+        </div>
+    </div>
+    {{ form_end(form) }}
+{% endblock %}
